@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" stylesheets="@../css/styles.css" vgap="10" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="568.0" prefWidth="634.0">
+         <children>
+            <ScatterChart fx:id="chart" layoutX="10.0" layoutY="14.0">
+              <xAxis>
+                <NumberAxis side="BOTTOM" fx:id="xAxis" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" side="LEFT" />
+              </yAxis>
+            </ScatterChart>
+            <Button fx:id="begin" layoutX="518.0" layoutY="50.0" mnemonicParsing="false" text="Begin" />
+            <Button fx:id="stop" layoutX="564.0" layoutY="50.0" mnemonicParsing="false" text="Stop" />
+            <TextField fx:id="configurationField" layoutX="136.0" layoutY="414.0" />
+            <TextField fx:id="betaField" layoutX="136.0" layoutY="448.0" />
+            <TextField fx:id="percent" layoutX="136.0" layoutY="481.0" />
+            <TextField fx:id="speed" layoutX="136.0" layoutY="514.0" />
+            <Label layoutX="28.0" layoutY="418.0" text="Конфигурация сети" />
+            <Label layoutX="106.0" layoutY="452.0" text="beta" />
+            <Label layoutX="32.0" layoutY="484.0" prefHeight="18.0" prefWidth="98.0" text="\% обуч. выборки" />
+            <Label layoutX="28.0" layoutY="514.0" text="скорость обучения" />
+            <TextField fx:id="teachError" layoutX="456.0" layoutY="448.0" />
+            <TextField fx:id="testError" layoutX="456.0" layoutY="481.0" />
+            <Label layoutX="342.0" layoutY="484.0" text="Ошибка на тестовой" />
+            <Label layoutX="325.0" layoutY="452.0" text="Ошибка на обучающей" />
+            <TextField fx:id="iterationField" layoutX="527.0" layoutY="519.0" prefHeight="26.0" prefWidth="78.0" />
+            <Label layoutX="399.0" layoutY="522.0" prefHeight="18.0" prefWidth="130.0" text="Количество итераций" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
